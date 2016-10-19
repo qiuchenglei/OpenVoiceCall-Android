@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "io.agora.openacall"
-        minSdkVersion 14
+        minSdkVersion 14 // ICE_CREAM_SANDWICH
         targetSdkVersion 24
         versionCode 19
         versionName "1.7.0"
