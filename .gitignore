@@ -38,6 +38,8 @@ proguard/
 /.idea/workspace.xml
 obj/
 
+.externalNativeBuild
+
 # cscope or ctags files
 cscope.in.out
 cscope.out

@@ -10,14 +10,16 @@ OpenVoiceCall is a demo of [Agora](http://www.agora.io) Voice SDK - Android
 
 ## Build Instructions
 
-Android SDK/NDK tools need to be ready on you host machine, if you does not have them ready, follow instructions here:
+Java 8 SDK/Android SDK/NDK tools need to be ready on you host machine, if you does not have them ready, follow instructions here:
 
+* http://www.oracle.com/technetwork/java/javase/overview/index.html
 * https://developer.android.com/studio/index.html
 * https://developer.android.com/ndk/index.html
 
 
-We use `Gradle` to build, if you want know more about `Gradle`, follow instructions here:
+We use `Gradle`/`Jack and Jill` to build, if you want know more about `Gradle`/`Jack and Jill`, follow instructions here:
 
+* http://tools.android.com/tech-docs/jackandjill
 * https://developer.android.com/studio/build/index.html
 * http://gradle.org/getting-started-android-build/
 
@@ -33,7 +35,7 @@ NOTICE: before building, you need to
 	you can get your own ID at https://dashboard.agora.io/
 
 
-2. update libraries at app/libs and app/src/main/libs, check PLACEHOLDER for details
+2. update libraries at app/libs(*.jar) and app/src/main/libs(*.so), check PLACEHOLDER for details
 
 
 Gradle build instructions
