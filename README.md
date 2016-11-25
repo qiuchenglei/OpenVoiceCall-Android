@@ -35,7 +35,11 @@ NOTICE: before building, you need to
 	you can get your own ID at https://dashboard.agora.io/
 
 
-2. update libraries at app/libs(*.jar) and app/src/main/libs(*.so), check PLACEHOLDER for details
+2. If you get source code directly from GitHub, you need to copy library and header files from Agora SDK package to your project, follow below instructions.
+
+	update libraries at app/libs(*.jar) and app/src/main/libs(*.so), check PLACEHOLDER for details
+
+	If you get source code from Agora SDK package, we have already configured it well, just build and run it.
 
 
 Gradle build instructions

@@ -13,7 +13,7 @@ android {
         minSdkVersion 14 // ICE_CREAM_SANDWICH
         targetSdkVersion 25
         versionCode 19
-        versionName "1.7.2"
+        versionName "1.7.x"
 
         jackOptions {
             enabled true
