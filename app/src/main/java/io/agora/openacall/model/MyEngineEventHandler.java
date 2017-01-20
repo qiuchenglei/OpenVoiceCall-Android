@@ -1,8 +1,10 @@
 package io.agora.openacall.model;
 
 import android.content.Context;
+
 import io.agora.rtc.IRtcEngineEventHandler;
 import io.agora.rtc.RtcEngine;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -138,6 +140,18 @@ public class MyEngineEventHandler {
 
         public void onWarning(int warn) {
             log.debug("onWarning " + warn);
+        }
+
+        @Override
+        public void onAudioRouteChanged(int routing) {
+            log.debug("onAudioRouteChanged " + routing);
+
+            Iterator<AGEventHandler> it = mEventHandlerList.keySet().iterator();
+            while (it.hasNext()) {
+                AGEventHandler handler = it.next();
+                handler.onExtraCallback(AGEventHandler.EVENT_TYPE_ON_AUDIO_ROUTE_CHANGED, routing);
+            }
+
         }
     };
 

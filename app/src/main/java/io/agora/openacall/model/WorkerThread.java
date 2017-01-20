@@ -9,14 +9,15 @@ import android.os.Message;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
-import io.agora.openacall.R;
-import io.agora.rtc.Constants;
-import io.agora.rtc.RtcEngine;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.util.Locale;
+
+import io.agora.openacall.R;
+import io.agora.rtc.Constants;
+import io.agora.rtc.RtcEngine;
 
 public class WorkerThread extends Thread {
     private final static Logger log = LoggerFactory.getLogger(WorkerThread.class);
