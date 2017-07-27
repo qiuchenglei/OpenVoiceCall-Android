@@ -1,57 +1,45 @@
-## NOTICE
+# Open Voice Call for Android
 
-OpenVoiceCall is a demo of [Agora](http://www.agora.io) Voice SDK - Android
+*Read this in other languages: [English](README.en.md)*
 
+这个开源示例项目演示了如何快速集成 Agora 音频 SDK，实现1对1音频通话。
 
-## Bug reports
+在这个示例项目中包含了以下功能：
 
-* https://github.com/AgoraLab/OpenVoiceCall_Android/issues
+- 加入通话和离开通话；
+- 静音和解除静音；
+- 切换扬声器和听筒；
 
+你也可以在这里查看入门版的示例项目：[Agora-Android-Voice-Tutorial-1to1](https://github.com/AgoraIO/Agora-Android-Voice-Tutorial-1to1)
 
-## Build Instructions
+你也可以在这里查看 iOS 平台的示例项目：
 
-Java 7 SDK/Android SDK/NDK tools need to be ready on you host machine, if you does not have them ready, follow instructions here:
+- [OpenVoiceCall-iOS](https://github.com/AgoraIO/OpenVoiceCall-iOS)
 
-* http://www.oracle.com/technetwork/java/javase/overview/index.html
-* https://developer.android.com/studio/index.html
-* https://developer.android.com/ndk/index.html
+## 运行示例程序
+首先在 [Agora.io 注册](https://dashboard.agora.io/cn/signup/) 注册账号，并创建自己的测试项目，获取到 AppID。将 AppID 填写进 "app/src/main/res/values/strings_config.xml"
 
-`Jack and Jill` is deprecated by Google, so we do not enable it by default in current project
+```
+<string name="private_app_id"><#YOUR APP ID#></string>
+```
 
-* https://android-developers.googleblog.com/2017/03/future-of-java-8-language-feature.html
+然后在 [Agora.io SDK](https://www.agora.io/cn/download/) 下载 **语音通话 + 直播 SDK**，解压后将其中的 **libs** 文件夹下的 ***.jar** 复制到本项目的 **app/libs** 下，其中的 **libs** 文件夹下的 **arm64-v8a**/**x86**/**armeabi-v7a** 复制到本项目的 **app/src/main/libs** 下。
 
-We use `Gradle` to build, if you want know more about `Gradle`, follow instructions here:
+最后用 Android Studio 打开该项目，连上设备，编译并运行。
 
-* https://developer.android.com/studio/build/index.html
-* http://gradle.org/getting-started-android-build/
+也可以使用 `Gradle` 直接编译运行。
 
+## 运行环境
+- Android Studio 2.0 +
+- 真实 Android 设备 (Nexus 5X 或者其它设备)
+- 部分模拟器会存在功能缺失或者性能问题，所以推荐使用真机
 
+## 联系我们
+- 完整的 API 文档见 [文档中心](https://docs.agora.io/cn/)
+- 如果在集成中遇到问题, 你可以到 [开发者社区](https://dev.agora.io/cn/) 提问
+- 如果有售前咨询问题, 可以拨打 400 632 6626，或加入官方Q群 12742516 提问
+- 如果需要售后技术支持, 你可以在 [Agora Dashboard](https://dashboard.agora.io) 提交工单
+- 如果发现了示例代码的 bug, 欢迎提交 [issue](https://github.com/AgoraIO/OpenVoiceCall-Android/issues)
 
-NOTICE: before building, you need to
-
-
-1. update your key at app/src/main/res/values/strings_config.xml
-
-	private_app_id
-
-	you can get your own ID at https://dashboard.agora.io/
-
-
-2. If you get source code directly from GitHub, you need to copy library and header files from Agora SDK package to your project, follow below instructions.
-
-	update libraries at app/libs(*.jar) and app/src/main/libs(*.so), check PLACEHOLDER for details
-
-	If you get source code from Agora SDK package, we have already configured it well, just build and run it.
-
-
-Gradle build instructions
-
-	./gradlew assembleDebug
-This will generate the APK, you need to install and run this APK on Android devices.
-
-Or just use the one step command to build and install 
-
-	./gradlew installDebug
-
-
-Enjoy voice calling
+## 代码许可
+The MIT License (MIT).
