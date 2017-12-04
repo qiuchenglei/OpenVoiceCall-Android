@@ -2,7 +2,7 @@
 
 *Read this in other languages: [English](README.en.md)*
 
-这个开源示例项目演示了如何快速集成 Agora 音频 SDK，实现1对1音频通话。
+这个开源示例项目演示了如何快速集成 Agora 音频 SDK，实现多人音频通话。
 
 在这个示例项目中包含了以下功能：
 

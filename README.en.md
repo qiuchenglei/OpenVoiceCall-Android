@@ -2,7 +2,7 @@
 
 *其他语言版本： [简体中文](README.md)*
 
-The Open Voice Call for Android Sample App is an open-source demo that will help you get voice chat integrated directly into your iOS applications using the Agora Voice SDK.
+The Open Voice Call for Android Sample App is an open-source demo that will help you get voice chat integrated directly into your Android applications using the Agora Voice SDK.
 
 With this sample app, you can:
 
