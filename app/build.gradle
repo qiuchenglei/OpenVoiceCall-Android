@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "io.agora.openacall"
-        minSdkVersion 14 // ICE_CREAM_SANDWICH
+        minSdkVersion 16 // ICE_CREAM_SANDWICH
         targetSdkVersion 25
         versionCode 19
         versionName "x.y.z"
@@ -31,16 +31,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['src/main/libs']
-        }
-    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'io.agora.rtc:voice-sdk:2.0.0'
     compile 'com.android.support:appcompat-v7:25.3.0'
     compile 'com.android.support:support-v4:25.3.0'
     compile 'com.android.support:design:25.3.0'

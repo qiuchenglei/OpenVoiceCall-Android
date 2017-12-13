@@ -17,15 +17,42 @@ You can find demo for iOS here:
 - [OpenVoiceCall-iOS](https://github.com/AgoraIO/OpenVoiceCall-iOS)
 
 ## Running the App
-First, create a developer account at [Agora.io](https://dashboard.agora.io/signin/), and obtain an App ID. Update "app/src/main/res/values/strings_config.xml" with your App ID.
+**First**, create a developer account at [Agora.io](https://dashboard.agora.io/signin/), and obtain an App ID. Update "app/src/main/res/values/strings_config.xml" with your App ID.
 
 ```
 <string name="private_app_id"><#YOUR APP ID#></string>
 ```
 
-Next, download the **Agora Voice SDK** from [Agora.io SDK](https://www.agora.io/en/download/). Unzip the downloaded SDK package and copy ***.jar** under **libs** to **app/libs**, **arm64-v8a**/**x86**/**armeabi-v7a** under **libs** to **app/src/main/libs**.
+**Next**, integrate the Agora Voice SDK and there are two ways to integrate:
 
-Finally, open project with Android Studio, connect your Android device, build and run.
+- The recommended way to integrate:
+
+Add the address which can integrate the Agora Voice SDK automatically through JCenter in the property of the dependence of the "app/build.gradle":
+```
+compile 'io.agora.rtc:voice-sdk:2.0.0'
+```
+(This sample program has added this address and do not need to add again. Adding the link address is the most important step if you want to integrate the Agora Voice SDK in your own application.)
+
+- Alternative way to integrate:
+
+First, download the **Agora Voice SDK** from [Agora.io SDK](https://www.agora.io/en/download/). Unzip the downloaded SDK package and copy ***.jar** under **libs** to **app/libs**, **arm64-v8a**/**x86**/**armeabi-v7a** under **libs** to **app/src/main/libs**.
+
+Then, add the following code in the property of the android of the "app/build.gradle":
+
+```
+ sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/libs']
+        }
+    }
+```
+At last, add the fllowing code in the property of the dependence of the "app/build.gradle":
+
+```
+compile fileTree(dir: 'libs', include: ['*.jar'])
+```
+
+**Finally**, open project with Android Studio, connect your Android device, build and run.
 
 Or use `Gradle` to build and run.
 
